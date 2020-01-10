@@ -10,6 +10,16 @@ quotes: Quote[] = [
 
 ];
 
+addNewQuote(quote) {
+quote.submittedBy = quote.submittedBy;
+quote.author = quote.author;
+quote.quote = quote.quote;
+this.quotes.push(quote);
+
+
+
+}
+
   constructor() { }
 
   ngOnInit() {
