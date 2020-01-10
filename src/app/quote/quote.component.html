@@ -3,31 +3,15 @@
 <br>
 
 
-<div class="list-group">
+<div *ngFor='let quote of quotes; let i=index' class="list-group">
 
 
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1"></h5>
-      <small></small>
+      <h5 style="color: black;" class="mb-1" >{{quote.submittedBy}}</h5>
+      <small style="color: black;">{{quote.author}}</small>
     </div>
-    <p class="mb-1"></p>
-    <small>.</small>
-
-
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1"></h5>
-      <small class="text-muted"></small>
-    </div>
-    <p class="mb-1" style="color: black;">gddgsgfgs</p>
-    <small class="text-muted">.</small>
-
-
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1"></h5>
-      <small class="text-muted"></small>
-    </div>
-    <p class="mb-1"></p>
-    <small class="text-muted"></small>
+    <p class="mb-1" style="color: black;">{{quote.quote}}</p>
+    <small></small>
 
 </div>
 <app-quote-form (addQuote)="addNewQuote($event)" ></app-quote-form>
