@@ -27,7 +27,7 @@ upvote(quote) {
 
 }
 
-deleteEntry(index) {
+deleteQuote(index) {
 
   const toDelete = confirm(`Are you sure you want to delete`);
   if (toDelete) {
