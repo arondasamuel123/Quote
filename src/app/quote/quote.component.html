@@ -22,7 +22,7 @@
     </div>
     <p class="mb-1" style="color: black;">{{quote.quote}}</p>
 
-    <small style="color: black;">{{quote.datePosted}}</small>
+    <small style="color: black;">{{quote.datePosted |dateAgo}}</small>
 
     <button (click)="deleteQuote(i)" class="btn btn-outline-danger">Delete Quote</button>
 </div>
