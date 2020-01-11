@@ -4,14 +4,20 @@
 
 
 <div *ngFor='let quote of quotes; let i=index' class="list-group">
-
-
-    <div class="d-flex w-100 justify-content-between">
+  <!-- <i class="glyphicon glyphicon-chevron-up" style="color: black;" (click)="upvote(quote)">up</i> -->
+  <button class="btn btn-success" (click)='upvote(quote)'>Up</button>
+  <span class="label label-primary"style="color: black;">{{quote.votes}}</span>
+  <i class="glyphicon glyphicon-chevron-down"style="color: black;">down</i>
+  <br>
+  <br>
+    <div class="d-flex w-100 justify-content-between" >
       <h5 style="color: black;" class="mb-1" >{{quote.submittedBy}}</h5>
       <small style="color: black;">{{quote.author}}</small>
     </div>
     <p class="mb-1" style="color: black;">{{quote.quote}}</p>
+
     <small></small>
+
 
 </div>
 <app-quote-form (addQuote)="addNewQuote($event)" ></app-quote-form>

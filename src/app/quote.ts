@@ -1,6 +1,10 @@
 export class Quote {
-
-  constructor(public quote: string, public author: string, public submitedBy: string, public upvote: number, public downvote: number) {
-
+  public votes: number;
+  public upvoted: boolean;
+  public downvoted: boolean;
+  constructor(public quote: string, public author: string, public submitedBy: string) {
+    this.votes = 0;
+    this.upvoted = false;
+    this.downvoted = false;
   }
 }
