@@ -21,11 +21,11 @@ this.quotes.push(quote);
 
 }
 
-upvote(quote) {
-  quote.upvoted =! quote.upvoted;
+// upvote(quote) {
+//   quote.upvoted =! quote.upvoted;
 
 
-}
+// }
 
 deleteQuote(index) {
 
@@ -37,12 +37,12 @@ deleteQuote(index) {
 
 }
 
-votes(quote) {
-  if(quote.upvoted) {
-    return quote.votes + 1;
-  }
-  console.log(quote.votes);
-}
+// votes(quote) {
+//   if(quote.upvoted) {
+//     return quote.votes + 1;
+//   }
+//   console.log(quote.votes);
+// }
 
 
 

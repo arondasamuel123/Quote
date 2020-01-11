@@ -1,8 +1,14 @@
-<br>
-<br>
-<br>
 
 
+
+
+
+
+
+
+
+
+<br>
 <div *ngFor='let quote of quotes; let i=index' class="list-group">
   <!-- <i class="glyphicon glyphicon-chevron-up" style="color: black;" (click)="upvote(quote)">up</i> -->
   <button class="btn btn-success" (click)='upvote(quote)'>Up</button>
@@ -15,11 +21,15 @@
       <small style="color: black;">{{quote.author}}</small>
     </div>
     <p class="mb-1" style="color: black;">{{quote.quote}}</p>
+
+    <small style="color: black;">{{quote.datePosted}}</small>
+
     <button (click)="deleteQuote(i)" class="btn btn-outline-danger">Delete Quote</button>
-    <small></small>
-
-
 </div>
+<br>
+<br>
+<br>
+<br>
 <app-quote-form (addQuote)="addNewQuote($event)" ></app-quote-form>
 
 
