@@ -11,7 +11,7 @@
 <br>
 <div *ngFor='let quote of quotes; let i=index' class="list-group">
   <!-- <i class="glyphicon glyphicon-chevron-up" style="color: black;" (click)="upvote(quote)">up</i> -->
-  <button class="btn btn-success" (click)='upvote(quote)'>Up</button>
+  <button class="btn btn-success">Up</button>
   <span class="label label-primary"style="color: black;">{{quote.votes}}</span>
   <i class="glyphicon glyphicon-chevron-down"style="color: black;">down</i>
   <br>
