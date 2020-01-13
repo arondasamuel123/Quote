@@ -1,10 +1,16 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appTextHighlight]'
 })
 export class TextHighlightDirective {
 
-  constructor() { }
+  constructor(private elem: ElementRef) {
+
+    this.elem.nativeElement.style.backgroundColor = '#68FF33';
+
+   }
+
+
 
 }

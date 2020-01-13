@@ -1,15 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-<br>
+<div class="container">
 <div *ngFor='let quote of quotes; let i=index' class="list-group">
+
   <i class="glyphicon glyphicon-chevron-up" style="color: black;" (click)="upvote(i)">upvote</i>
   <!-- <button class="btn btn-success" ">Up</button> -->
   <span class="label label-primary"style="color: black;">{{quote.upvoted}}</span>
@@ -28,6 +19,9 @@
     <small style="color: black;">{{quote.datePosted |dateAgo}}</small>
 
     <button (click)="deleteQuote(i)" class="btn btn-outline-danger">Delete Quote</button>
+    <div appTextHighlight>
+      <p class="text-dark" *ngIf='quote.highvotes > 5'>{{quote.quote}} </p>
+    </div>
 </div>
 <br>
 <br>
@@ -35,5 +29,5 @@
 <br>
 <app-quote-form (addQuote)="addNewQuote($event)" ></app-quote-form>
 
-
+</div>
 
