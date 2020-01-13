@@ -1,5 +1,5 @@
 <div class="container">
-<div *ngFor='let quote of quotes; let i=index' class="list-group">
+<div *ngFor='let quote of sortQuotes; let i=index' class="list-group">
 
   <i class="glyphicon glyphicon-chevron-up" style="color: black;" (click)="upvote(i)">upvote</i>
   <!-- <button class="btn btn-success" ">Up</button> -->
@@ -7,11 +7,11 @@
   <i class="glyphicon glyphicon-chevron-down"style="color: black;" (click)="downvote(i)">downvote</i>
   <span class="label label-primary"style="color: black;">{{quote.downvoted}}</span>
 
-  <p style="color: black;">{{quote.highvotes}}</p>
+  <!-- <p style="color: black;">{{quote.highvotes}}</p> -->
   <br>
   <br>
     <div class="d-flex w-100 justify-content-between" >
-      <h5 style="color: black;" class="mb-1" >{{quote.submittedBy}}</h5>
+      <h5 style="color: black;" class="mb-1" >{{quote.submitedBy}}</h5>
       <small style="color: black;">{{quote.author}}</small>
     </div>
     <p class="mb-1" style="color: black;">{{quote.quote}}</p>
@@ -19,10 +19,12 @@
     <small style="color: black;">{{quote.datePosted |dateAgo}}</small>
 
     <button (click)="deleteQuote(i)" class="btn btn-outline-danger">Delete Quote</button>
+
     <div appTextHighlight>
-      <p class="text-dark" *ngIf='quote.highvotes > 5'>{{quote.quote}} </p>
+  <p class="text-dark" >Top voted Quote:{{quotes[0].quote}} </p>
     </div>
 </div>
+
 <br>
 <br>
 <br>

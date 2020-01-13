@@ -12,9 +12,10 @@ quotes: Quote[] = [
 ];
 
 addNewQuote(quote) {
-quote.submittedBy = quote.submittedBy;
+quote.submitedBy = quote.submitedBy;
 quote.author = quote.author;
 quote.quote = quote.quote;
+quote.datePosted = new Date(quote.datePosted);
 this.quotes.push(quote);
 
 
@@ -41,7 +42,11 @@ deleteQuote(index) {
   }
 
 }
-
+get sortQuotes() {
+  return this.quotes.sort(( a, b ) => {
+    return b.upvoted as any - a.upvoted as any;
+  });
+}
 // votes(quote) {
 //   if(quote.upvoted) {
 //     return quote.votes + 1;
