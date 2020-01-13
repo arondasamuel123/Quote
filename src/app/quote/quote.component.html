@@ -10,10 +10,11 @@
 
 <br>
 <div *ngFor='let quote of quotes; let i=index' class="list-group">
-  <i class="glyphicon glyphicon-chevron-up" style="color: black;" >up</i>
-  <button class="btn btn-success" (click)="upvote(i)">Up</button>
+  <i class="glyphicon glyphicon-chevron-up" style="color: black;" (click)="upvote(i)">upvote</i>
+  <!-- <button class="btn btn-success" ">Up</button> -->
   <span class="label label-primary"style="color: black;">{{quote.upvoted}}</span>
-  <i class="glyphicon glyphicon-chevron-down"style="color: black;">down</i>
+  <i class="glyphicon glyphicon-chevron-down"style="color: black;" (click)="downvote(i)">downvote</i>
+  <span class="label label-primary"style="color: black;">{{quote.downvoted}}</span>
   <br>
   <br>
     <div class="d-flex w-100 justify-content-between" >

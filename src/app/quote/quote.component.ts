@@ -26,6 +26,9 @@ upvote(index) {
 
 
 }
+downvote(index) {
+  this.quotes[index].downvoted ++;
+}
 
 deleteQuote(index) {
 
