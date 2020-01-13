@@ -21,11 +21,11 @@ this.quotes.push(quote);
 
 }
 
-// upvote(quote) {
-//   quote.upvoted =! quote.upvoted;
+upvote(index) {
+  this.quotes[index].upvoted ++;
 
 
-// }
+}
 
 deleteQuote(index) {
 
