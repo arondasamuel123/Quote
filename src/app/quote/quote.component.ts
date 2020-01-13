@@ -23,11 +23,13 @@ this.quotes.push(quote);
 
 upvote(index) {
   this.quotes[index].upvoted ++;
+  this.quotes[index].highvotes = this.quotes[index].upvoted - this.quotes[index].downvoted;
 
 
 }
 downvote(index) {
   this.quotes[index].downvoted ++;
+  this.quotes[index].highvotes = this.quotes[index].upvoted - this.quotes[index].downvoted;
 }
 
 deleteQuote(index) {
