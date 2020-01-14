@@ -44,7 +44,7 @@ deleteQuote(index) {
 }
 get sortQuotes() {
   return this.quotes.sort(( a, b ) => {
-    return b.upvoted as any - a.upvoted as any;
+    return (b.upvoted as any - a.upvoted as any)[0];
   });
 }
 // votes(quote) {
